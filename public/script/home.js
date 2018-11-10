@@ -107,6 +107,21 @@ function cycle_colors() {
   }, 4000);
 }
 
+function printLinks(ui) {
+    if (ui.slice.item.Label === "Education") {
+      return ("<btn class='btn btn-lg btn-primary' href='/browse'>Education Hub</btn>");
+    }
+    else {
+      return ("<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[0].link) + "' >" + (ui.slice.item.onsiteResources[0].title) + "</a><b class='white-text'>   //   </b>"
+      + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[1].link) + "' >" + (ui.slice.item.onsiteResources[1].title) + "</a><b class='white-text'>   //   </b> "
+      + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[2].link) + "' >" + (ui.slice.item.onsiteResources[2].title) + "</a>"
+      + "</p></div><hr class='white'><div class='col-12'><p><h2 class='white-text'>External Learning Resources</h2>"
+      + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[0].link) + "' >" + (ui.slice.item.externalResources[0].title) + "</a><b class='white-text'>   //   </b>"
+      + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[1].link) + "' >" + (ui.slice.item.externalResources[1].title) + "</a><b class='white-text'>   //   </b> "
+      + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[2].link) + "' >" + (ui.slice.item.externalResources[2].title) + "</a>");
+    }
+}
+
 function generateInfoBlob(ui) {
   console.log(JSON.stringify(ui));
   return ("<div class='col-12' style='padding: 25px'><h1 class='white-text'>"
@@ -114,13 +129,8 @@ function generateInfoBlob(ui) {
           + "</h1></div><div class='col-12 white-text' style='max-height: 430px; overflow-y: auto;'><p>"
           + (ui.slice.item.GeneralInfo)
           + "</p></div><hr class='white'><div class='col-12'><p><h2 class='white-text'>On-site Learning Resources</h2>"
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[0].link) + "' >" + (ui.slice.item.onsiteResources[0].title) + "</a><b class='white-text'>   //   </b>"
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[1].link) + "' >" + (ui.slice.item.onsiteResources[1].title) + "</a><b class='white-text'>   //   </b> "
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[2].link) + "' >" + (ui.slice.item.onsiteResources[2].title) + "</a>"
-          + "</p></div><hr class='white'><div class='col-12'><p><h2 class='white-text'>External Learning Resources</h2>"
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[0].link) + "' >" + (ui.slice.item.externalResources[0].title) + "</a><b class='white-text'>   //   </b>"
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[1].link) + "' >" + (ui.slice.item.externalResources[1].title) + "</a><b class='white-text'>   //   </b> "
-          + "<a class='white-text linky-boi link-active' href='" + (ui.slice.item.externalResources[2].link) + "' >" + (ui.slice.item.externalResources[2].title) + "</a>");
+          + printLinks(ui)
+          );
 }
 
 function generateSampleBlob() {
@@ -135,7 +145,7 @@ function generateSampleBlob() {
           + "</p></div><hr class='white'><div class='col-12'><p><h2 class='white-text'>External Learning Resources</h2>"
           + "<a class='white-text linky-boi link-active' href='#' >Pteradactylink</a><b class='white-text'>   //   </b>"
           + "<a class='white-text linky-boi link-active' href='#' >Tyrannysaurous Link</a><b class='white-text'>   //   </b> "
-          + "<a class='white-text linky-boi link-active' href='#' >Africa by Toto</a>");
+          + "<a class='white-text linky-boi link-active' href='https://www.youtube.com/watch?v=FTQbiNvZqaY' >Africa by Toto</a>");
 }
 
 const data = [

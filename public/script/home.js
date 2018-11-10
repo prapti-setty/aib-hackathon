@@ -1,17 +1,34 @@
 $(document).ready(function() {
+  // $("#chart").igDoughnutChart({
+  //   width: "100%",
+  //   height: "700px",
+  //   series:
+  //   [{
+  //       name: "Pop1990",
+  //       labelMemberPath: "CountryName",
+  //       valueMemberPath: "Pop1990",
+  //       dataSource: data,
+  //       labelsPosition: "bestFit",
+  //       formatLabel: function (context) {
+  //           return context.itemLabel + " (" + context.item.Pop1990 + ")";
+  //       }
+  //   }]
+  // });
+
+
   $("#chart").igDoughnutChart({
     width: "100%",
-    height: "700px",
+    height: "550px",
     series:
     [{
-        name: "Pop1990",
-        labelMemberPath: "CountryName",
-        valueMemberPath: "Pop1990",
-        dataSource: data,
-        labelsPosition: "bestFit",
-        formatLabel: function (context) {
-            return context.itemLabel + " (" + context.item.Pop1990 + ")";
-        }
+      name: "Pop1990",
+      labelMemberPath: "CountryName",
+      valueMemberPath: "Pop1990",
+      dataSource: data,
+      labelsPosition: "bestFit",
+      formatLabel: function (context) {
+        return context.itemLabel + " (" + context.item.Pop1990 + ")";
+      }
     }]
   });
   cycle_colors();

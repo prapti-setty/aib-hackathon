@@ -1,47 +1,119 @@
 $(document).ready(function() {
-  // $("#chart").igDoughnutChart({
-  //   width: "100%",
-  //   height: "700px",
-  //   series:
-  //   [{
-  //       name: "Pop1990",
-  //       labelMemberPath: "CountryName",
-  //       valueMemberPath: "Pop1990",
-  //       dataSource: data,
-  //       labelsPosition: "bestFit",
-  //       formatLabel: function (context) {
-  //           return context.itemLabel + " (" + context.item.Pop1990 + ")";
-  //       }
-  //   }]
-  // });
+  var data = [
+                  { "DepartmentSize": 43, "Budget": 60, "Label": "balls<script>console.log('SHIT')</script>" },
+                  { "DepartmentSize": 29, "Budget": 40, "Label": "Sales" },
+                  { "DepartmentSize": 50, "Budget": 60, "Label": "IT" },
+                  { "DepartmentSize": 22, "Budget": 40, "Label": "Marketing" },
+                  { "DepartmentSize": 13, "Budget": 60, "Label": "Development" },
+                  { "DepartmentSize": 34, "Budget": 20, "Label": "Support" }];
 
+              $("#chart").igDoughnutChart({
+                  width: "100%",
+                  height: "820px",
+                  innerExtent: 20,
+                  series:
+                      [
+                          {
+                              name: "DepartmentSize",
+                              labelMemberPath: "Label",
+                              valueMemberPath: "DepartmentSize",
+                              dataSource: data,
+                              labelsPosition: "outsideEnd",
+                              showTooltip: true,
+                              tooltipTemplate: "<h1>SHITE</h1>"
+                          }
+                      ]
+              });
+              $(document).delegate("#chart", "igdoughnutchartsliceclick", function (evt, ui) {
+                  // Get the options object of the doughnut chart.
+                  ui.doughnut;
 
-  $("#chart").igDoughnutChart({
-    width: "100%",
-    height: "550px",
-    series:
-    [{
-      name: "Pop1990",
-      labelMemberPath: "CountryName",
-      valueMemberPath: "Pop1990",
-      dataSource: data,
-      labelsPosition: "bestFit",
-      formatLabel: function (context) {
-        return context.itemLabel + " (" + context.item.Pop1990 + ")";
-      }
-    }]
-  });
+                  // Get an object containing information about the clicked slice.
+                  ui.slice;
+              });
+
+              // Initialize
+              $("#chart").igDoughnutChart({
+                  sliceClick: function(evt, ui) { console.log("MEH");}
+              });
+
+              $("#angleBudget").slider({
+                  slide: function (event, ui) {
+                      $("#chart").igDoughnutChart("option", "series", [{ name: "Budget", startAngle: ui.value }]);
+                  },
+                  min: 0,
+                  max: 360
+              });
+
+              //Bind
+              $(document).delegate("#chart", "igdoughnutcharttooltipshowing", function (evt, ui) {
+                  // Get the options object of the doughnut chart.
+                  ui.doughnut;
+
+                  // Get the jQuery object containing the tooltip.
+                  ui.element;
+
+                  // Get the datasource item displayed in the tooltip.
+                  ui.item;
+
+                  // Get the current series.
+                  ui.series;
+              });
+
+              // Initialize
+              $("#chart").igDoughnutChart({
+                  tooltipShowing: function(evt, ui) { console.log("WREEEGGGGHHHHH");}
+              });
+
+              $("#angleDepartmentSize").slider({
+                  slide: function (event, ui) {
+                      $("#chart").igDoughnutChart("updateSeries", { name: "DepartmentSize", startAngle: ui.value });
+                  },
+                  min: 0,
+                  max: 360
+              });
+
+              $("#innerExtent").slider({
+                  slide: function (event, ui) {
+                      $("#chart").igDoughnutChart("option", "innerExtent", ui.value);
+                  },
+                  min: 0,
+                  max: 80,
+                  value: 20
+              });
+
+              $("#labelExtent").slider({
+                  slide: function (event, ui) {
+                      $("#chart").igDoughnutChart("updateSeries", { name: "DepartmentSize", labelExtent: ui.value });
+                  },
+                  min: 0,
+                  max: 50,
+                  value: 10
+              });
+
+              $("#explodedRadius").slider({
+                  slide: function (event, ui) {
+                      $("#chart").igPieChart("option", "explodedRadius", ui.value / 100);
+                  },
+                  min: 0,
+                  max: 100,
+                  value: 20
+              });
+
+              $("#labelPosition").change(function (e) {
+                  var labelPosition = $(this).val();
+                  $("#chart").igDoughnutChart("updateSeries", { name: "Budget", labelsPosition: labelPosition });
+              });
+
+              $("#labelPosition2").change(function (e) {
+                  var labelPosition = $(this).val();
+                  $("#chart").igDoughnutChart("updateSeries", { name: "DepartmentSize", labelsPosition: labelPosition });
+                  $("#labelExtent").slider("option", "disabled", labelPosition != "outsideEnd");
+              });
   cycle_colors();
 });
 
 const colors = ['red', 'blue', 'green'];
-const data = [
-    { "CountryName": "China", "Pop1990": 1141 },
-    { "CountryName": "India", "Pop1990": 849 },
-    { "CountryName": "United States", "Pop1990": 250 },
-    { "CountryName": "Indonesia", "Pop1990": 178 },
-    { "CountryName": "Brazil", "Pop1990": 150 }
-];
 
 
 function cycle_colors() {

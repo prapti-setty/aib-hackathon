@@ -10,8 +10,20 @@
   color: blue;
 }
 
+.white {
+  border-color: white;
+}
+
 .white-text {
   color: white;
+}
+
+.linky-boi {
+  font-size: 1.2em;
+}
+
+.link-active:hover {
+  color: red;
 }
 
 .info-aggregator {

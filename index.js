@@ -21,7 +21,8 @@ app.set('view engine', 'ejs');
 let home_page_routes = require('./routes/home.js');
 router.get('/', home_page_routes);
 
-router.get('/browse', );
+let browse_routes = require('./routes/browse.js');
+router.get('/browse', browse_routes);
 
 //Error Routes
 router.get('*', (req,res) => {

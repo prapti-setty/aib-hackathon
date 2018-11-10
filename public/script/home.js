@@ -1,10 +1,10 @@
 $(document).ready(function() {
   var data = [
-                  { "DepartmentSize": 43, "Budget": 60, "Label": "balls<script>console.log('SHIT')</script>" },
-                  { "DepartmentSize": 29, "Budget": 40, "Label": "Sales" },
-                  { "DepartmentSize": 50, "Budget": 60, "Label": "IT" },
-                  { "DepartmentSize": 22, "Budget": 40, "Label": "Marketing" },
-                  { "DepartmentSize": 13, "Budget": 60, "Label": "Development" },
+                  { "DepartmentSize": 43, "Budget": 60, "Label": "History" },
+                  { "DepartmentSize": 29, "Budget": 40, "Label": "Language" },
+                  { "DepartmentSize": 50, "Budget": 60, "Label": "Social" },
+                  { "DepartmentSize": 22, "Budget": 40, "Label": "" },
+                  { "DepartmentSize": 13, "Budget": 60, "Label": "" },
                   { "DepartmentSize": 34, "Budget": 20, "Label": "Support" }];
 
               $("#chart").igDoughnutChart({
@@ -20,7 +20,7 @@ $(document).ready(function() {
                               dataSource: data,
                               labelsPosition: "outsideEnd",
                               showTooltip: true,
-                              tooltipTemplate: "<h1>SHITE</h1>"
+                              tooltipTemplate: "<h1>Sample</h1>"
                           }
                       ]
               });

@@ -24,6 +24,9 @@ router.get('/', home_page_routes);
 let browse_routes = require('./routes/browse.js');
 router.get('/browse', browse_routes);
 
+let wiki = require('./routes/wiki.js');
+router.get('/browse', wiki);
+
 //Error Routes
 router.get('*', (req,res) => {
 	console.log('missing-page');

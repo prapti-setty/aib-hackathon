@@ -10,6 +10,16 @@
   color: blue;
 }
 
+.white-text {
+  color: white;
+}
+
+.info-aggregator {
+  border-radius: 4em;
+  min-height: 100%;
+  overflow-y: auto
+}
+
 .optionTdWidth {
             width: 300px;
         }

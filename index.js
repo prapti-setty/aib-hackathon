@@ -36,7 +36,7 @@ router.get('/tutorial', tutorial);
 let further = require('./routes/further.js');
 router.get('/further', further);
 
-let linkUp = require('./routes/LinkUp.js');
+let linkUp = require('./routes/linkUp.js');
 router.get('/linkUp', linkUp);
 
 //Error Routes

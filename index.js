@@ -24,8 +24,20 @@ router.get('/', home_page_routes);
 let browse_routes = require('./routes/browse.js');
 router.get('/browse', browse_routes);
 
+let courseTemplate = require('./routes/courseTemplate.js');
+router.get('/courseTemplate', courseTemplate);
+
 let wiki = require('./routes/wiki.js');
-router.get('/browse', wiki);
+router.get('/wiki', wiki);
+
+let tutorial = require('./routes/tutorial.js');
+router.get('/tutorial', tutorial);
+
+let further = require('./routes/further.js');
+router.get('/further', further);
+
+let linkUp = require('./routes/LinkUp.js');
+router.get('/linkUp', linkUp);
 
 //Error Routes
 router.get('*', (req,res) => {

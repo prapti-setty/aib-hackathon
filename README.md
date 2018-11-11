@@ -1,8 +1,7 @@
 # aib-hackathon
 
-# An Open source project created at the Aib Hackathon 2018 (Pull Requests Welcome)
-
-# Theme: Inclusion
+An Open source project created at the Aib Hackathon 2018 (Pull Requests Welcome)
+Theme: Inclusion
 
 # Idea: 
 Create an educational platform for refugees, migrants or new people landing on Irish SHores with little information about Ireland

@@ -109,7 +109,7 @@ function cycle_colors() {
 
 function printLinks(ui) {
     if (ui.slice.item.Label === "Education") {
-      return ("<btn class='btn btn-lg btn-primary' href='/browse'>Education Hub</btn>");
+      return ("<a class='btn btn-lg btn-primary' href='/browse'>Education Hub</a>");
     }
     else {
       return ("<a class='white-text linky-boi link-active' href='" + (ui.slice.item.onsiteResources[0].link) + "' >" + (ui.slice.item.onsiteResources[0].title) + "</a><b class='white-text'>   //   </b>"
@@ -137,7 +137,11 @@ function generateSampleBlob() {
   return ("<div class='col-12' style='padding: 25px'><h1 class='white-text'>"
           + "Welcome to Culture Hub"
           + "</h1></div><div class='col-12 white-text' style='max-height: 400px; overflow-y: auto;'><p>"
-          + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          + "Culture Hub is an educational platform for refugees, migrants or any other people landing on Irish Shores for the first time. With little information about Ireland, new people in our country can often feel a sense of confusion, loss of comfort, familiarity and confidence due to their lack of knowledge about the place and their change of surroundings. Along with this huge change in their life come a lot of information that may not always be aggregated and easily accessible. To try and aid these people, we came up with the idea of creating Culture Hub, a centralized system that is easily accessible and free to use. Our service will allow for people to learn more about topics that can be very intimidating to them."
+          + "</p> <p>"
+          + "Culture Hub is currently divided up into 4 main focus areas that make it easy to get started in learning about Ireland. These 4 areas are as follows: History and Culture, Language, Education, Social. We plan to add in 2 more focus areas in the near future that we believe are hugely important: Job Seeking Aids, Mental Health."
+          + "</p> <p>"
+          + "To find out more about how you can make the most of your time on CUlture Hub, click the button below to visit our course on getting started with and using Culture Hub."
           + "</p></div><hr class='white'><div class='col-12'><p><h2 class='white-text'>On-site Learning Resources</h2>"
           + "<a class='white-text linky-boi link-active' href='#' >Linky Boi</a><b class='white-text'>   //   </b>"
           + "<a class='white-text linky-boi link-active' href='#' >Rawr I am a handy Link</a><b class='white-text'>   //   </b> "

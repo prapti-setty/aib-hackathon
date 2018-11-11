@@ -3,11 +3,8 @@
 An Open source project created at the Aib Hackathon 2018 (Pull Requests Welcome)
 Theme: Inclusion
 
-# Idea: 
-Create an educational platform for refugees, migrants or new people landing on Irish SHores with little information about Ireland
-
-# Why create this?
-New people in our country can often feel a sense of confusion, loss of comfort, familiarity and cofidence due to their lack of knowledge about the place. To try and aid these people, we came up with the idea of creating Culture Hub, a centralized system that would allow for new people to learn more about topics that can be very intimidating to them.
+# Idea / Why create this?
+Culture Hub is an educational platform for refugees, migrants or any other people landing on Irish Shores for the first time. With little information about Ireland, new people in our country can often feel a sense of confusion, loss of comfort, familiarity and confidence due to their lack of knowledge about the place and their change of surroundings. Along with this huge change in their life come a lot of information that may not always be aggregated and easily accessible. To try and aid these people, we came up with the idea of creating Culture Hub, a centralized system that is easily accessible and free to use. Our service will allow for people to learn more about topics that can be very intimidating to them.
 
 # Current Main Focus Areas: 
 
@@ -16,7 +13,7 @@ New people in our country can often feel a sense of confusion, loss of comfort, 
 3. Social Aspects
 4. Education
 
-# Future Additions to Focus Areas:
+# Future Additions to Main Focus Areas:
 
 5. Job Seeking Aids
 6. Mental Health
